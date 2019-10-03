@@ -14,6 +14,7 @@ Accounts.validateNewUser((user) => {
     'profile.name': { type: String },
     'profile.bio': { type: String },
     'profile.social_media': { type: String },
+    'profile.ethereum': { type: String },
     'profile.score': { type: Number },
   }).validate(user);
 

@@ -55,6 +55,7 @@ class App extends Component {
                 <p>{profile.bio}</p>
                 <br/>
                 <p>Social Media: {profile.social_media}</p>
+                <p>Ethereum Address: {profile.ethereum}</p>
               </div>
               <div className="card-action">
 

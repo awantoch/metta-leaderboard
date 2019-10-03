@@ -103,6 +103,11 @@ export default class AccountsUI extends Component {
           </div>
 
           <div className="row">
+            <input placeholder="Ethereum Address" ref="ethereum" className="validate"></input>
+            <label htmlFor="etherum">Ethereum Address</label>
+          </div>
+
+          <div className="row">
             <input placeholder="Short Bio" ref="bio" className="validate" required></input>
             <label htmlFor="bio">Short Bio</label>
           </div>
@@ -136,6 +141,7 @@ export default class AccountsUI extends Component {
         name: ReactDOM.findDOMNode(this.refs.full_name).value,
         bio: ReactDOM.findDOMNode(this.refs.bio).value,
         social_media: ReactDOM.findDOMNode(this.refs.social_media).value,
+        ethereum: ReactDOM.findDOMNode(this.refs.ethereum).value,
         score: 0,
       }
     }
