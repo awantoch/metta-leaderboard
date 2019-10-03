@@ -3,6 +3,8 @@ import { Meteor } from 'meteor/meteor';
 import { Session } from 'meteor/session'
 import { withTracker } from 'meteor/react-meteor-data';
 
+import QRCode from 'qrcode.react';
+
 import AccountsUI from './Accounts.js';
 
 const globalRegex = ".*";
@@ -56,6 +58,8 @@ class App extends Component {
                 <br/>
                 <p>Social Media: {profile.social_media}</p>
                 <p>Ethereum Address: {profile.ethereum}</p>
+                <br/>
+                <QRCode value={profile.ethereum || ""} />
               </div>
               <div className="card-action">
 
