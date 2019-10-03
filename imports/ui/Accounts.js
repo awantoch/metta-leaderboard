@@ -59,7 +59,7 @@ export default class AccountsUI extends Component {
       <nav>
         <div className="nav-wrapper purple">
           <a href="#" className="brand-logo right"><img style={{height: '64px'}} src={logoUrl}/></a>
-          <ul id="nav-mobile" className="left hide-on-med-and-down">
+          <ul id="nav-mobile" className="left">
             <li><a onClick={this.logout.bind(this)}>Logout</a></li>
           </ul>
         </div>
@@ -146,8 +146,6 @@ export default class AccountsUI extends Component {
       }
     }
 
-    console.log(JSON.stringify(user))
-
     if (user.password !== ReactDOM.findDOMNode(this.refs.reg_password_confirm).value) {
       return alert("Passwords do not match!")
     }
@@ -162,7 +160,7 @@ export default class AccountsUI extends Component {
           <nav>
             <div className="nav-wrapper purple">
               <a href="#" className="brand-logo right"><img style={{height: '64px'}} src={logoUrl}/></a>
-              <ul id="nav-mobile" className="left hide-on-med-and-down">
+              <ul id="nav-mobile" className="left">
                 <li><a onClick={this.toggleRegistration.bind(this)}>Register</a></li>
                 <li><a onClick={this.toggleLogin.bind(this)}>Login</a></li>
               </ul>
